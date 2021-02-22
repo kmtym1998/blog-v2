@@ -30,6 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
           <CssBaseline />
           <AppHeader></AppHeader>
           <Container maxWidth="sm">
+            <div className="g-spacer"></div>
             <Component {...pageProps} />
           </Container>
           <AppFooter></AppFooter>

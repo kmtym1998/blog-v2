@@ -1,5 +1,13 @@
 import Head from 'next/head';
-import styles from '../styles/index.module.css';
+import { getSortedPostsData } from '../../lib/getPosts';
+import styles from '../../styles/index.module.css';
+
+interface StaticProps {
+  props: AllPostsData;
+}
+interface AllPostsData {
+  allPostsData: unknown;
+}
 
 export default function Home(): JSX.Element {
   return (
@@ -41,4 +49,13 @@ export default function Home(): JSX.Element {
       </main>
     </div>
   );
+}
+
+export function getStaticProps(): StaticProps {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
