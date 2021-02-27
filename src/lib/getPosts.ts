@@ -15,6 +15,8 @@ interface PostContent {
 }
 interface PostData {
   id: string;
+  title: string;
+  date: string;
 }
 interface id {
   id: string;
