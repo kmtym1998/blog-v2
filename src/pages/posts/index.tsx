@@ -1,19 +1,26 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { getSortedPostsData } from '../../lib/getPosts';
 import styles from '../../styles/index.module.css';
 
 interface StaticProps {
-  props: AllPostsData;
+  props: AllProps;
 }
-interface AllPostsData {
-  allPostsData: unknown;
+interface AllProps {
+  allPostsData: Array<PostData>;
+}
+interface PostData {
+  id: string;
+  title: string;
+  date: string;
 }
 
-export default function Home(): JSX.Element {
+export default function Home(props: AllProps): JSX.Element {
+  const allPostsData = props.allPostsData;
   return (
     <div>
       <Head>
-        <title>Ryohei KOMATSUYAMA</title>
+        <title>Posts</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="viewport"
@@ -22,40 +29,24 @@ export default function Home(): JSX.Element {
       </Head>
 
       <main className={styles.main}>
-        <div>
-          <img src="/flamingo.jpg" alt="" className={styles['img-profile']} />
-          <p className={`${styles['t-center']} ${styles['t-bold']}`}>
-            Ryohei KOMATSUYAMA
-          </p>
-        </div>
-
-        <div>
-          <p>
-            コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1
-            コンテンツ1 コンテンツ1 コンテンツ1コンテンツ1 コンテンツ1
-            コンテンツ1 コンテンツ1 コンテンツ1 コンテンツ1 コンテンツ1
-            コンテンツ1 コンテンツ1コンテンツ1コンテンツ1
-            コンテンツ1コンテンツ1コンテンツ1
-          </p>
-
-          <p>
-            コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2
-            コンテンツ2コンテンツ2 コンテンツ2 コンテンツ2
-            コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2
-            コンテンツ2 コンテンツ2コンテンツ2 コンテンツ2 コンテンツ2
-            コンテンツ2 コンテンツ2
-          </p>
-        </div>
+        <ul>
+          {allPostsData.map(({ id, date, title }: PostData) => (
+            <li key={id}>
+              <Link href={'/posts/' + id}>{title}</Link>
+              <br />
+              <small>{date}</small>
+            </li>
+          ))}
+        </ul>
       </main>
     </div>
   );
 }
 
 export function getStaticProps(): StaticProps {
-  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      allPostsData: getSortedPostsData(),
     },
   };
 }

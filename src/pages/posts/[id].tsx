@@ -8,22 +8,22 @@ interface PostData {
   date: string;
   contentHtml: string;
 }
-interface id {
+interface Id {
   id: string;
 }
 interface PostId {
-  params: id;
+  params: Id;
 }
 
-interface staticPaths {
+interface StaticPaths {
   paths: Array<PostId>;
   fallback: boolean;
 }
-interface staticPropsParams {
+interface StaticPropsParams {
   id: string;
 }
-interface staticPropsArg {
-  params: staticPropsParams;
+interface StaticPropsArg {
+  params: StaticPropsParams;
   locales: string;
   locale: string;
   defaultLocale: string;
@@ -43,7 +43,7 @@ export default function Post(post: PostData): JSX.Element {
   );
 }
 
-export function getStaticPaths(): staticPaths {
+export function getStaticPaths(): StaticPaths {
   const paths = getAllPostIds();
   return {
     paths,
@@ -51,7 +51,7 @@ export function getStaticPaths(): staticPaths {
   };
 }
 
-export async function getStaticProps(value: staticPropsArg): Promise<unknown> {
+export async function getStaticProps(value: StaticPropsArg): Promise<unknown> {
   const id: string = value.params.id;
   const postData: PostData = await getPostData(id);
 
