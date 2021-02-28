@@ -1,6 +1,6 @@
 ---
 title: '[TypeScript] Next独自の型'
-date: '2021-02-22'
+date: '2021/02/22'
 ---
 
 # SSG とか SSR のとき
