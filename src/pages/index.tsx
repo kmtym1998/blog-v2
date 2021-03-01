@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Icons from '../components/Icons';
 import styles from '../styles/index.module.css';
 
 export default function Home(): JSX.Element {
@@ -19,24 +20,11 @@ export default function Home(): JSX.Element {
           <p className={`${styles['t-center']} ${styles['t-bold']}`}>
             Ryohei KOMATSUYAMA
           </p>
+          <Icons></Icons>
         </div>
 
         <div>
-          <p>
-            コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1
-            コンテンツ1 コンテンツ1 コンテンツ1コンテンツ1 コンテンツ1
-            コンテンツ1 コンテンツ1 コンテンツ1 コンテンツ1 コンテンツ1
-            コンテンツ1 コンテンツ1コンテンツ1コンテンツ1
-            コンテンツ1コンテンツ1コンテンツ1
-          </p>
-
-          <p>
-            コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2
-            コンテンツ2コンテンツ2 コンテンツ2 コンテンツ2
-            コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2
-            コンテンツ2 コンテンツ2コンテンツ2 コンテンツ2 コンテンツ2
-            コンテンツ2 コンテンツ2
-          </p>
+          <p>小松山凌平のサイト</p>
         </div>
       </main>
     </div>

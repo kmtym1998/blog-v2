@@ -40,3 +40,13 @@
 .f-hr {
   color: #eee;
 }
+
+/*
+ * Icons
+ */
+.social-icon {
+  margin: 3px;
+}
+.icons-wrapper {
+  text-align: center;
+}
