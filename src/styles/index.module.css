@@ -60,3 +60,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.grid-list-container {
+  display: 'flex';
+  overflow: 'hidden';
+}
+
+.grid-list {
+  width: 'auto';
+  height: 'auto';
+}

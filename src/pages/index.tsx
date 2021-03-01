@@ -1,8 +1,50 @@
 import Head from 'next/head';
-import Icons from '../components/Icons';
+import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 import styles from '../styles/index.module.css';
+import Icons from '../components/Icons';
 
 export default function Home(): JSX.Element {
+  const tileData = [
+    {
+      img: 'img/IMG_0324.jpeg',
+      title: 'image1',
+      author: 'author',
+      cols: 2,
+    },
+    {
+      img: 'img/IMG_0610.jpeg',
+      title: 'image1',
+      author: 'author',
+      cols: 2,
+    },
+    {
+      img: 'img/IMG_0685.jpeg',
+      title: 'image1',
+      author: 'author',
+      cols: 2,
+    },
+    {
+      img: 'img/IMG_3165.jpeg',
+      title: 'image1',
+      author: 'author',
+      cols: 2,
+    },
+    {
+      img: 'img/IMG_3405.jpeg',
+      title: 'image1',
+      author: 'author',
+      cols: 2,
+    },
+    {
+      img: 'img/IMG_3959.jpeg',
+      title: 'image1',
+      author: 'author',
+      cols: 2,
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -24,7 +66,18 @@ export default function Home(): JSX.Element {
         </div>
 
         <div>
-          <p>小松山凌平のサイト</p>
+          <p>1998年9月9日生まれ</p>
+          <p>エンジニア</p>
+        </div>
+
+        <div className={styles['grid-list-container']}>
+          <GridList cellHeight={160} className={styles['grid-list']} cols={3}>
+            {tileData.map((tile) => (
+              <GridListTile key={tile.img} cols={tile.cols || 1}>
+                <img src={tile.img} alt={tile.title} />
+              </GridListTile>
+            ))}
+          </GridList>
         </div>
       </main>
     </div>
