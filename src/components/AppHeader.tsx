@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Link from 'next/link';
 import styles from '../styles/components.module.css';
 
 export default function appHeader(): JSX.Element {
@@ -19,7 +20,7 @@ export default function appHeader(): JSX.Element {
         </IconButton>
 
         <Typography variant="h5" className={styles['h-title']}>
-          Ryohei KOMATSUYAMA
+          <Link href="/">Ryohei KOMATSUYAMA</Link>
         </Typography>
       </Toolbar>
     </AppBar>
