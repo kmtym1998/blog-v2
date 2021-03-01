@@ -64,9 +64,15 @@
 .grid-list-container {
   display: 'flex';
   overflow: 'hidden';
+  width: 300px;
 }
 
 .grid-list {
-  width: 'auto';
-  height: 'auto';
+  min-width: 310px;
+  transform: 'translateZ(0)';
+}
+
+.grid-title-bar {
+  background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+    'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)';
 }
