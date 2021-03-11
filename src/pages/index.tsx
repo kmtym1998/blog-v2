@@ -22,13 +22,14 @@ export default function Home(): JSX.Element {
         <div className="t-center">
           <img src="/flamingo.jpg" alt="" className={styles['img-profile']} />
           <p className="t-center t-bold">Ryohei KOMATSUYAMA</p>
-          <Icons></Icons>
         </div>
 
         <div className="t-center">
           <p>1998年9月9日生まれ</p>
           <p>エンジニア1年目</p>
         </div>
+
+        <Icons></Icons>
 
         <div className="g-spacer"></div>
 
