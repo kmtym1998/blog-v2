@@ -7,7 +7,6 @@ import Container from '@material-ui/core/Container';
 
 import styles from '../styles/index.module.css';
 import Icons from '../components/Icons';
-// import AppDrawer from '../components/AppDrawer';
 
 import tileData from '../lib/tileData';
 
@@ -20,8 +19,6 @@ export default function Home(): JSX.Element {
       </Head>
 
       <main className={styles.main}>
-        {/* <AppDrawer></AppDrawer> */}
-
         <div className="t-center">
           <img src="/flamingo.jpg" alt="" className={styles['img-profile']} />
           <p className="t-center t-bold">Ryohei KOMATSUYAMA</p>

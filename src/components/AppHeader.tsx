@@ -1,23 +1,17 @@
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'next/link';
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
 import styles from '../styles/components.module.css';
+import AppDrawer from './AppDrawer';
 
 export default function appHeader(): JSX.Element {
   return (
     <AppBar>
       <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          className={styles['h-iconButton']}
-        >
-          <MenuIcon />
-        </IconButton>
+        <AppDrawer></AppDrawer>
 
         <Typography variant="h5" className={styles['h-title']}>
           <Link href="/">Ryohei KOMATSUYAMA</Link>
