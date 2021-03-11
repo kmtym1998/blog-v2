@@ -32,3 +32,15 @@ a {
 .g-spacer {
   margin-top: 90px;
 }
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-bold {
+  font-weight: bold;
+}
