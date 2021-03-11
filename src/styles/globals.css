@@ -44,3 +44,30 @@ a {
 .t-bold {
   font-weight: bold;
 }
+
+/* override material ui styles */
+.MuiContainer-root a {
+  color: #f44336;
+  text-decoration: none;
+}
+.MuiContainer-root a:hover {
+  text-decoration: underline;
+}
+.MuiContainer-root a:visited {
+  color: #9a0036;
+}
+
+.MuiGridListTileBar-title {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.MuiGridListTileBar-titlePositionBottom {
+  height: 2em;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
