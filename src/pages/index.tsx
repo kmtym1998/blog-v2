@@ -4,57 +4,13 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
 import styles from '../styles/index.module.css';
 import Icons from '../components/Icons';
 
-export default function Home(): JSX.Element {
-  const tileData = [
-    {
-      img: 'img/IMG_0324.jpeg',
-      title: 'image1',
-      author: 'author',
-      cols: 1,
-      featured: true,
-    },
-    {
-      img: 'img/IMG_0610.jpeg',
-      title: 'image1',
-      author: 'author',
-      cols: 1,
-      featured: false,
-    },
-    {
-      img: 'img/IMG_0685.jpeg',
-      title: 'image1',
-      author: 'author',
-      cols: 1,
-      featured: false,
-    },
-    {
-      img: 'img/IMG_3165.jpeg',
-      title: 'image1',
-      author: 'author',
-      cols: 1,
-      featured: true,
-    },
-    {
-      img: 'img/IMG_3405.jpeg',
-      title: 'image1',
-      author: 'author',
-      cols: 1,
-      featured: false,
-    },
-    {
-      img: 'img/IMG_3959.jpeg',
-      title: 'image1',
-      author: 'author',
-      cols: 1,
-      featured: false,
-    },
-  ];
+import tileData from '../lib/tileData';
 
+export default function Home(): JSX.Element {
   return (
     <div>
       <Head>
@@ -70,26 +26,17 @@ export default function Home(): JSX.Element {
           </p>
           <Icons></Icons>
         </div>
-        <div>
+
+        <div className={styles['t-center']}>
           <p>1998年9月9日生まれ</p>
-          <p>エンジニア</p>
+          <p>エンジニア1年目</p>
         </div>
 
-        <CssBaseline />
-        <Container
-          maxWidth="xs"
-          fixed
-          classes={{ maxWidthXs: '1000px' }}
-          className={styles['grid-list-container']}
-        >
+        <Container maxWidth="xs" fixed>
           {/* breakpointごとにグリッドの表示の比率を変える */}
-          <GridList cellHeight={200} spacing={1}>
+          <GridList cellHeight={160} spacing={1} cols={100}>
             {tileData.map((tile) => (
-              <GridListTile
-                key={tile.img}
-                cols={tile.featured ? 2 : 1}
-                rows={tile.featured ? 2 : 1}
-              >
+              <GridListTile key={tile.img} cols={tile.cols} rows={tile.rows}>
                 <img src={tile.img} alt={tile.title} />
                 <GridListTileBar title={tile.title} titlePosition="bottom" />
               </GridListTile>
