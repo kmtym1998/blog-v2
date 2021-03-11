@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
         </div>
 
         <Container maxWidth="xs" fixed>
-          {/* breakpointごとにグリッドの表示の比率を変える */}
+          {/* TODO: breakpointごとにグリッドの表示の比率を変える */}
           <GridList cellHeight={160} spacing={1} cols={100}>
             {tileData.map((tile) => (
               <GridListTile key={tile.img} cols={tile.cols} rows={tile.rows}>
