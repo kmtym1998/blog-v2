@@ -30,6 +30,8 @@ export default function Home(): JSX.Element {
           <p>エンジニア1年目</p>
         </div>
 
+        <div className="g-spacer"></div>
+
         <Container maxWidth="xs" fixed>
           {/* TODO: breakpointごとにグリッドの表示の比率を変える */}
           <GridList cellHeight={160} spacing={1} cols={100}>
