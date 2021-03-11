@@ -7,7 +7,7 @@ export default function appFooter(): JSX.Element {
       <p>Thank you very much for coming!</p>
       <p>© 2020-2021 Ryohei KOMATSUYAMA, All Rights Reserved.</p>
       <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        href="https://vercel.com/kmtym1998/blog-v2"
         target="_blank"
         rel="noopener noreferrer"
       >
